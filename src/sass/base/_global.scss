@@ -1,0 +1,33 @@
+html {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+  font-size:1.1em;
+  color: $primaryblack;
+}
+
+h1 {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  font-size: 2.3em;
+  color: $primaryblue;
+}
+
+h2 {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  font-size: 1.8em;
+  color: $primaryblue;
+  padding-top: 1.2em;
+}
+
+h3 {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  font-size:1.1em;
+}
+
+.example {
+  background-color: #f6f6f6;
+  padding: 2em;
+}
