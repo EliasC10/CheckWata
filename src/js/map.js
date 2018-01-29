@@ -1,5 +1,5 @@
+var country
 jQuery(document).ready(function(){
-  let country
   getColors = function(){
     let colors = {}, key
     for (key in map.regions) {
