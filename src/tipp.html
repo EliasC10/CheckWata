@@ -6,6 +6,7 @@
   <link href="https://fonts.googleapis.com/css?family=Barlow:300,300i,500,500i,900" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="js/form.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
   <header id='navigation'>
@@ -19,15 +20,28 @@
   </header>
 
   <div id="abc">
+    <form action="#" id="form" method="post" name="form">
     <div id="popupContact">
-      <form action="#" id="form" method="post" name="form">
         <img id="close" src="images/close.png" onclick ="div_hide()">
         <h2>Your Data</h2>
-        <hr>
-        <p>Shower p. Week</p><input id="shower" name="shower" type="number">
-        <p>Laundry p. Week</p><input id="laundry" name="laundry" type="number">
-        <p>Dishwasher p. Week</p><textarea id="msg" name="message" placeholder="Message"></textarea>
-        <a href="javascript:%20check_empty()" id="submit">Send</a>
+        <section id="form_wrapper">
+          <ul id="data_name">
+            <li><p>Shower p. Week</p></li>
+            <li><p>Laundry p. Week</p></li>
+            <li><p>Dishwasher p. Week</p></li>
+            <li><p>Vegetarian</p></li>
+          </ul>
+
+          <ul id="data_form">
+            <li><select id="shower" name="shower" class="1-20"></select></li>
+            <li><select id="laundry" name="laundry" class="1-20"></select></li>
+            <li><select id="dishwasher" name="dishwasher" class="1-20"></select></li>
+            <li><input id="vegetarian" name="vegetarian" type="checkbox"></input></li>
+          </ul>
+        </section>
+        <div class="bttn__wrapper" id="button_wrapper">
+          <a href="javascript:%20check_empty()" class="bttn__form" id="submit">SAVE</a>
+        </div>
       </form>
     </div>
   </div>
@@ -54,5 +68,15 @@
       </ul>
     </article>
   </section>
+
+<script>
+  $(function(){
+    var $select = $(".1-20");
+    for (i=1;i<=20;i++){
+        $select.append($('<option></option>').val(i).html(i))
+    }
+});
+</script>
+
 </body>
 </html>

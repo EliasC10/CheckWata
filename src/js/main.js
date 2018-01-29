@@ -1,6 +1,6 @@
 console.log("I go first!");
 function check_empty() {
-if (document.getElementById('name').value == "" || document.getElementById('email').value == "" || document.getElementById('msg').value == "") {
+if (document.getElementById('shower').value == "" || document.getElementById('dishwasher').value == "" || document.getElementById('laundry').value == "") {
 alert("Fill All Fields !");
 } else {
 document.getElementById('form').submit();
