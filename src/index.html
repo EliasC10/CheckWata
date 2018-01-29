@@ -9,6 +9,7 @@
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery.jvectormap.min.js"></script>
   <script src="js/jquery-jvectormap-world-mill.js"></script>
+  <script src="js/map.js"></script>
 </head>
 <body>
   <header id='navigation'>
@@ -21,14 +22,14 @@
     </nav>
   </header>
   
-  <div id="map" style="width: 600px; height: 400px"></div>
+  <section id="map__environment">
+    <div id="map"></div>
+  </section>
   
-  <script>
-    $(function(){
-      $('#map').vectorMap({
-        map: 'world_mill'
-      });
-    });  
-  </script>
+  <section class="button--middle">
+    <div class="bttn__wrapper">
+      <a href="comparison.html" class="bttn">Check Now</a>
+    </div>
+  </section>
 </body>
 </html>
