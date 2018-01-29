@@ -122,3 +122,8 @@ a.bttn {
     left: 0;
     right: 0;
     opacity: 1; }
+
+.list {
+  color: #115876; }
+  .list span {
+  color: black; }    
