@@ -11,12 +11,24 @@
   <script src="js/jquery-jvectormap-world-mill.js"></script>
 </head>
 <body>
+  <header id='navigation'>
+    <nav>
+      <a href="index.html"><img src="images/logo_blue.png" alt="logo"></a>
+      <ul>
+        <li><a class="medium" href="#">CHECKNOW</a></li>
+        <li><a class="medium" href="#">TIPPS</a></li>
+      </ul>
+    </nav>
+  </header>
+  
   <div id="map" style="width: 600px; height: 400px"></div>
+  
   <script>
     $(function(){
-      $('#map').vectorMap({map: 'world_mill'});
-    });
+      $('#map').vectorMap({
+        map: 'world_mill'
+      });
+    });  
   </script>
- 
 </body>
 </html>
