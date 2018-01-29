@@ -27,14 +27,15 @@
   
   <section class="button--middle">
     <div class="bttn__wrapper">
-      <a href="comparison.html" class="bttn">CheckNow</a>
+      <a href="comparison.html" class="bttn">Check Now</a>
     </div>
   </section>
   
   <script>
     jQuery(document).ready(function(){
+      let country
       getColors = function(){
-        var colors = {}, key
+        let colors = {}, key
         for (key in map.regions) {
           colors[key] = ['#115876'] 
         }
@@ -49,6 +50,10 @@
           regions: [{
             attribute: 'fill'
           }]
+        },
+        onRegionClick: function (event, code) {
+            window.location.href = "comparison.html?country=" + code
+            country = code
         }
       })
       map.series.regions[0].setValues(getColors())
