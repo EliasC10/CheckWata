@@ -122,3 +122,28 @@ a.bttn {
     left: 0;
     right: 0;
     opacity: 1; }
+
+nav {
+  display: flex;
+  height: 4em;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #115876;
+  margin-bottom: 2em; }
+  nav img {
+    max-width: 100%;
+    max-height: 50%;
+    margin: 0.8em 0 0 1em; }
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0; }
+  nav li {
+    padding-top: 1.2em;
+    margin-right: 1.5em; }
+    nav li a {
+      text-decoration: none;
+      color: #FDFDFD; }
+      nav li a:hover {
+        font-weight: 900; }
