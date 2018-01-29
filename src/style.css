@@ -153,3 +153,24 @@ nav {
   color: #115876; }
   .list span {
     color: black; }
+
+.tipps {
+  margin-left: 40vh;
+  display: flex;
+  flex-direction: column; }
+
+#links li {
+  margin-bottom: 5vh; }
+
+#links a {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  text-decoration: none;
+  color: #115876; }
+
+#links a:hover {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  color: #47A8D2; }
