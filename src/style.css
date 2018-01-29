@@ -1,4 +1,3 @@
-@import "http://fonts.googleapis.com/css?family=Raleway";
 body {
   margin: 0;
   padding: 0; }
@@ -197,9 +196,6 @@ nav {
   display: flex;
   justify-content: center; }
 
-/*----------------------------------------------
-CSS settings for HTML div Exact Center
-------------------------------------------------*/
 #abc {
   width: 100%;
   height: 100%;
@@ -213,7 +209,7 @@ CSS settings for HTML div Exact Center
 
 #data_name {
   list-style: none;
-  color: #FDFDFD; }
+  color: #E7E7E7; }
   #data_name p {
     margin: 0;
     padding-bottom: 20px; }
@@ -243,12 +239,9 @@ div#popupContact {
   background-color: #115876;
   position: absolute;
   border-radius: 10px;
-  border: 2px solid #FDFDFD;
+  border: 2px solid #E7E7E7;
   border-radius: 10px; }
-  div#popupContact h2 {
-    color: #FDFDFD; }
 
-<<<<<<< HEAD
 p {
   margin-top: 30px; }
 
@@ -256,7 +249,8 @@ h2 {
   padding: 20px 35px;
   margin: -10px -50px;
   text-align: center;
-  border-radius: 10px 10px 0 0; }
+  border-radius: 10px 10px 0 0;
+  color: #E7E7E7; }
 
 hr {
   margin: 10px -50px;
@@ -269,50 +263,24 @@ input[type=text] {
   margin-top: 30px;
   border: 1px solid #ccc;
   padding-left: 40px;
-  font-size: 16px;
-  font-family: raleway; }
+  font-size: 16px; }
 
-#name {
-  background-image: url(../images/name.jpg);
-  background-repeat: no-repeat;
-  background-position: 5px 7px; }
-
-#email {
-  background-image: url(../images/email.png);
-  background-repeat: no-repeat;
-  background-position: 5px 7px; }
-
-textarea {
-  background-image: url(../images/msg.png);
-  background-repeat: no-repeat;
-  background-position: 5px 7px;
-  width: 82%;
-  height: 95px;
-  padding: 10px;
-  resize: none;
-  margin-top: 30px;
-  border: 1px solid #ccc;
-  padding-left: 40px;
-  font-size: 16px;
-  font-family: raleway;
-=======
-#button_wrapper .bttn__wrapper {
->>>>>>> b09b8b3fac7c1a0f50f131c9a7c4e5e5ec3d8427
+.bttn__wrapper {
   margin-bottom: 30px; }
 
-#button_wrapper a.bttn__form {
-  color: #FDFDFD;
+a.bttn__form {
+  color: #E7E7E7;
   text-decoration: none;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s ease all; }
-  #button_wrapper a.bttn__form:hover {
-    background-color: #FDFDFD;
+  a.bttn__form:hover {
+    background-color: #E7E7E7;
     color: #115876;
     border-color: #115876; }
-  #button_wrapper a.bttn__form:focus {
+  a.bttn__form:focus {
     color: #E7E7E7; }
 
-#button_wrapper .bttn__form {
+.bttn__form {
   font-size: 25px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -320,11 +288,11 @@ textarea {
   text-align: center;
   width: 200px;
   padding: 14px 0px;
-  border: 2px solid #FDFDFD;
+  border: 2px solid #E7E7E7;
   border-radius: 10px;
   position: relative;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1); }
-  #button_wrapper .bttn__form:before {
+  .bttn__form:before {
     -webkit-transition: 0.5s all ease;
     transition: 0.5s all ease;
     position: absolute;
@@ -334,15 +302,15 @@ textarea {
     bottom: 0;
     opacity: 0;
     content: '';
-    background-color: #FDFDFD;
+    background-color: #E7E7E7;
     z-index: -2; }
-  #button_wrapper .bttn__form:hover:before {
+  .bttn__form:hover:before {
     -webkit-transition: 0.5s all ease;
     transition: 0.5s all ease;
     left: 0;
     right: 0;
     opacity: 1; }
-  #button_wrapper .bttn__form:focus:before {
+  .bttn__form:focus:before {
     transition: 0.5s all ease;
     left: 0;
     right: 0;
