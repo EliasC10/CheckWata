@@ -1,4 +1,3 @@
-console.log("I go first!");
 function check_empty() {
 if (document.getElementById('name').value == "" || document.getElementById('email').value == "" || document.getElementById('msg').value == "") {
 alert("Fill All Fields !");
@@ -15,5 +14,3 @@ document.getElementById('abc').style.display = "block";
 function div_hide(){
 document.getElementById('abc').style.display = "none";
 }
-
-(function report_ready(){console.log('ready!');})();
