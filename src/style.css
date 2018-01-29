@@ -182,3 +182,16 @@ nav {
   font-weight: 500;
   font-style: italic;
   color: #47A8D2; }
+
+#map__environment {
+  height: 80vh;
+  display: flex;
+  justify-content: center; }
+
+#map {
+  width: 95%;
+  height: 95%; }
+
+.button--middle {
+  display: flex;
+  justify-content: center; }

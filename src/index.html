@@ -21,14 +21,38 @@
     </nav>
   </header>
   
-  <div id="map" style="width: 600px; height: 400px"></div>
+  <section id="map__environment">
+    <div id="map"></div>
+  </section>
+  
+  <section class="button--middle">
+    <div class="bttn__wrapper">
+      <a href="comparison.html" class="bttn">CheckNow</a>
+    </div>
+  </section>
   
   <script>
-    $(function(){
-      $('#map').vectorMap({
-        map: 'world_mill'
-      });
-    });  
+    jQuery(document).ready(function(){
+      getColors = function(){
+        var colors = {}, key
+        for (key in map.regions) {
+          colors[key] = ['#115876'] 
+        }
+        return colors
+      },
+      map
+
+      map = new jvm.Map({
+        map: 'world_mill',
+        container: $('#map'),
+        series: {
+          regions: [{
+            attribute: 'fill'
+          }]
+        }
+      })
+      map.series.regions[0].setValues(getColors())
+    })
   </script>
 </body>
 </html>
