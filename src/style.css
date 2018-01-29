@@ -19,7 +19,8 @@ html {
   font-weight: 300;
   line-height: 1.5em;
   font-size: 1.1em;
-  color: #312F30; }
+  color: #312F30;
+  background-color: #E7E7E7; }
 
 h1 {
   font-family: 'Barlow', sans-serif;
@@ -122,3 +123,54 @@ a.bttn {
     left: 0;
     right: 0;
     opacity: 1; }
+
+nav {
+  display: flex;
+  height: 4em;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #115876;
+  margin-bottom: 2em; }
+  nav img {
+    max-width: 100%;
+    max-height: 50%;
+    margin: 0.8em 0 0 1em; }
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0; }
+  nav li {
+    padding-top: 1.2em;
+    margin-right: 1.5em; }
+    nav li a {
+      text-decoration: none;
+      color: #FDFDFD; }
+      nav li a:hover {
+        font-weight: 900; }
+
+.list {
+  color: #115876; }
+  .list span {
+    color: black; }
+
+.tipps {
+  margin-left: 40vh;
+  display: flex;
+  flex-direction: column; }
+
+#links li {
+  margin-bottom: 5vh; }
+
+#links a {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  text-decoration: none;
+  color: #115876; }
+
+#links a:hover {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  color: #47A8D2; }
