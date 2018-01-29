@@ -1,1 +1,3 @@
-(function report_ready(){console.log('ready!');})();
+(function report_ready() {
+  console.log('ready!');
+})();

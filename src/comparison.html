@@ -39,17 +39,14 @@
   </section>
   
   <script>
-    var url = new URL(window.location.href);
-    var country = url.searchParams.get("country");
-    var countrydata = JSON.parse(countries);
-    //countrydata.forEach(function(element){
-      
-    //})
-    
-    //countrydata[0].name
-    
-    console.log(country);
-    document.getElementById('countryName').innerHTML = country
+    var url = new URL(window.location.href)
+    var country = url.searchParams.get("country")
+    var countrydata = JSON.parse(countries)
+    countrydata.forEach(function(element) {
+      if(country == element.code){
+        document.getElementById('countryName').innerHTML = element.name
+      }
+    });
   </script>
 </body>
 </html>

@@ -1,13 +1,13 @@
-var country
-jQuery(document).ready(function(){
-  getColors = function(){
-    let colors = {}, key
+var country;
+jQuery(document).ready(function () {
+  getColors = function () {
+    let colors = {},
+        key;
     for (key in map.regions) {
-      colors[key] = ['#115876'] 
+      colors[key] = ['#115876'];
     }
-    return colors
-  },
-  map
+    return colors;
+  }, map;
 
   map = new jvm.Map({
     map: 'world_mill',
@@ -18,9 +18,9 @@ jQuery(document).ready(function(){
       }]
     },
     onRegionClick: function (event, code) {
-        window.location.href = "comparison.html?country=" + code
-        country = code
+      window.location.href = "comparison.html?country=" + code;
+      country = code;
     }
-  })
-  map.series.regions[0].setValues(getColors())
-})
+  });
+  map.series.regions[0].setValues(getColors());
+});
