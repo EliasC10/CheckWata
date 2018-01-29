@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/map.js"></script>
+  <script src="json/countries.json"></script>
 </head>
 <body>
   <header id='navigation'>
@@ -40,6 +41,13 @@
   <script>
     var url = new URL(window.location.href);
     var country = url.searchParams.get("country");
+    var countrydata = JSON.parse(countries);
+    //countrydata.forEach(function(element){
+      
+    //})
+    
+    //countrydata[0].name
+    
     console.log(country);
     document.getElementById('countryName').innerHTML = country
   </script>
