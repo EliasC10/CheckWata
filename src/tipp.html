@@ -5,17 +5,32 @@
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Barlow:300,300i,500,500i,900" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="js/form.js"></script>
 </head>
 <body>
-  <section id='navigation'>
-    <nav>
-      <a href="index.html"><img src="images/logo_blue.png" alt="logo"></a>
-      <ul>
-        <li><a class="medium" href="#">CHECKNOW</a></li>
-        <li><a class="medium" href="#">TIPPS</a></li>
-      </ul>
-    </nav>
-  </section>
+  <header id='navigation'>
+  <nav>
+    <a href="index.html"><img src="images/logo_blue.png" alt="logo"></a>
+    <ul>
+      <li><a id="popup" class="medium" href="javascript:div_show()">CHECKNOW</a></li>
+      <li><a class="medium" href="#">TIPPS</a></li>
+    </ul>
+  </nav>
+  </header>
+
+  <div id="abc">
+    <div id="popupContact">
+      <form action="#" id="form" method="post" name="form">
+        <img id="close" src="images/close.png" onclick ="div_hide()">
+        <h2>Your Data</h2>
+        <hr>
+        <p>Shower p. Week</p><input id="shower" name="shower" type="number">
+        <p>Laundry p. Week</p><input id="laundry" name="laundry" type="number">
+        <p>Dishwasher p. Week</p><textarea id="msg" name="message" placeholder="Message"></textarea>
+        <a href="javascript:%20check_empty()" id="submit">Send</a>
+      </form>
+    </div>
+  </div>
 
   <section class="tipps">
     <article id="personal_tipps">
