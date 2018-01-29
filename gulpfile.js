@@ -14,6 +14,9 @@ var changed = require('gulp-changed');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 
+var babel = require("gulp-babel");
+
+
 // SASS to CSS
 gulp.task('sass', function () {
   return gulp.src(src + '/sass/**/*.scss')
@@ -36,17 +39,16 @@ gulp.task('sass-prod', function () {
 // concat js, lib folder files come first
 gulp.task('js', ['jslint'], function() {
   return gulp.src([src + '/js/lib/*.js', src + '/js/*.js', notjssrc])
-    .pipe(concat('main.js'))
-    .pipe(gulp.dest(src + '/js/'))
-    .pipe(browserSync.stream());
+   .pipe(babel())
+   .pipe(gulp.dest(src + "/js/"));
 });
 
 // minify js
 gulp.task('js-prod', ['jslint'], function() {
   // uglify JS 
-  return gulp.src(src + '/js/main.js')
-    .pipe(uglify())
-    .pipe(gulp.dest(dest + '/js/'));
+  return gulp.src("src/app.js")
+     .pipe(babel())
+     .pipe(gulp.dest(dest + "/js/"));
 });
 
 // lint your js
