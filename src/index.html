@@ -5,8 +5,30 @@
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Barlow:300,300i,500,500i,900" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="jquery-jvectormap.css" type="text/css" media="screen"/>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery.jvectormap.min.js"></script>
+  <script src="js/jquery-jvectormap-world-mill.js"></script>
 </head>
 <body>
-  <h1>MMP2a</h1>
+  <header id='navigation'>
+    <nav>
+      <a href="index.html"><img src="images/logo_blue.png" alt="logo"></a>
+      <ul>
+        <li><a class="medium" href="#">CHECKNOW</a></li>
+        <li><a class="medium" href="#">TIPPS</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div id="map" style="width: 600px; height: 400px"></div>
+  
+  <script>
+    $(function(){
+      $('#map').vectorMap({
+        map: 'world_mill'
+      });
+    });  
+  </script>
 </body>
 </html>
