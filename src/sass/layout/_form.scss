@@ -1,7 +1,3 @@
-@import "http://fonts.googleapis.com/css?family=Raleway";
-/*----------------------------------------------
-CSS settings for HTML div Exact Center
-------------------------------------------------*/
 #abc {
 width:100%;
 height:100%;
@@ -13,103 +9,115 @@ position:fixed;
 background-color:#313131;
 overflow:auto
 }
+
+#data_name{
+  list-style: none;
+  color: $primarygrey;
+  p{
+    margin: 0;
+    padding-bottom: 20px;
+  }
+}
+
+#data_form{
+  list-style: none;
+  li{
+    padding-bottom: 20px;
+  }
+}
+
+#form_wrapper{
+  margin-left: 20%;
+  display: flex;
+}
+
 img#close {
 height: 30px;
-width: 30px;  
+width: 30px;
 position:absolute;
 right:-14px;
-top:-14px;
+top:-8px;
 cursor:pointer
 }
+
+
 div#popupContact {
+width: 40%;
+text-align: center;
+margin-left: 30%;
+margin-top: 6%;
+background-color: $primaryblue;
 position:absolute;
-left:50%;
-top:17%;
-margin-left:-202px;
-font-family:'Raleway',sans-serif
-}
-form {
-max-width:300px;
-min-width:250px;
-padding:10px 50px;
-border:2px solid gray;
+border-radius: 10px;
+border:2px solid $primarygrey;
 border-radius:10px;
-font-family:raleway;
-background-color:#fff
+
+    h2{
+      color: $primarygrey;
+    }
 }
-p {
-margin-top:30px
-}
-h2 {
-background-color:#FEFFED;
-padding:20px 35px;
-margin:-10px -50px;
-text-align:center;
-border-radius:10px 10px 0 0
-}
-hr {
-margin:10px -50px;
-border:0;
-border-top:1px solid #ccc
-}
-input[type=text] {
-width:82%;
-padding:10px;
-margin-top:30px;
-border:1px solid #ccc;
-padding-left:40px;
-font-size:16px;
-font-family:raleway
-}
-#name {
-background-image:url(../images/name.jpg);
-background-repeat:no-repeat;
-background-position:5px 7px
-}
-#email {
-background-image:url(../images/email.png);
-background-repeat:no-repeat;
-background-position:5px 7px
-}
-textarea {
-background-image:url(../images/msg.png);
-background-repeat:no-repeat;
-background-position:5px 7px;
-width:82%;
-height:95px;
-padding:10px;
-resize:none;
-margin-top:30px;
-border:1px solid #ccc;
-padding-left:40px;
-font-size:16px;
-font-family:raleway;
-margin-bottom:30px
-}
-#submit {
-text-decoration:none;
-width:100%;
-text-align:center;
-display:block;
-background-color:#FFBC00;
-color:#fff;
-border:1px solid #FFCB00;
-padding:10px 0;
-font-size:20px;
-cursor:pointer;
-border-radius:5px
-}
-span {
-color:red;
-font-weight:700
-}
-button {
-width:10%;
-height:45px;
-border-radius:3px;
-background-color:#cd853f;
-color:#fff;
-font-family:'Raleway',sans-serif;
-font-size:18px;
-cursor:pointer
+
+
+  .bttn__wrapper {
+    margin-bottom: 30px;
+  }
+
+  a.bttn__form {
+    color: $primarygrey;
+    text-decoration: none;
+    -webkit-transition: 0.3s all ease;
+    transition: 0.3s ease all;
+    &:hover {
+      background-color: $primarygrey;
+      color: $primaryblue;
+      border-color: $primaryblue;
+    }
+    &:focus {
+      color: $primarygrey;
+    }
+  }
+
+  .bttn__form {
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    padding: 14px 0px;
+    border: 2px solid $primarygrey;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.1);
+    &:before {
+      -webkit-transition: 0.5s all ease;
+      transition: 0.5s all ease;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      right: 50%;
+      bottom: 0;
+      opacity: 0;
+      content: '';
+      background-color: $primarygrey;
+      z-index: -2;
+    }
+    &:hover {
+      &:before {
+        -webkit-transition: 0.5s all ease;
+        transition: 0.5s all ease;
+        left: 0;
+        right: 0;
+        opacity: 1;
+      }
+    }
+    &:focus {
+      &:before {
+        transition: 0.5s all ease;
+        left: 0;
+        right: 0;
+        opacity: 1;
+      }
+    }
+  }
 }
