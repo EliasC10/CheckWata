@@ -37,7 +37,7 @@ gulp.task('sass-prod', function () {
 });
 
 // concat js, lib folder files come first
-gulp.task('js', ['jslint'], function() {
+gulp.task('js', function() {
   return gulp.src([src + '/js/lib/*.js', src + '/js/*.js', notjssrc])
    .pipe(babel())
    .pipe(gulp.dest(src + "/js/"));
