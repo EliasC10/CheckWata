@@ -6,10 +6,6 @@
   <link href="https://fonts.googleapis.com/css?family=Barlow:300,300i,500,500i,900" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="jquery-jvectormap.css" type="text/css" media="screen"/>
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery.jvectormap.min.js"></script>
-  <script src="js/jquery-jvectormap-world-mill.js"></script>
-  <script src="js/map.js"></script>
 </head>
 <body>
   <header id='navigation'>
@@ -25,7 +21,7 @@
   <section id="search-field"> 
     <form>
       <fieldset>
-        <input type="search" placeholder="Search country">
+        <input type="search" placeholder="Search country" id="user-input">
       </fieldset>
     </form>
   </section>
@@ -39,5 +35,11 @@
       <a href="checknow.html" class="bttn">Check Now</a>
     </div>
   </section>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery.jvectormap.min.js"></script>
+  <script src="js/jquery-jvectormap-world-mill.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/map.js"></script>
+  <script src="json/countries.json"></script>
 </body>
 </html>
