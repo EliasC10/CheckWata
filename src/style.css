@@ -206,6 +206,41 @@ nav {
   font-style: italic;
   color: #47A8D2; }
 
+#search-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 2.5%; }
+  #search-field fieldset {
+    position: relative;
+    display: inline-block;
+    padding: 0 0.3em;
+    background: white;
+    border: 1px solid #115876;
+    border-radius: 5px; }
+    #search-field fieldset input {
+      position: relative;
+      width: 14em;
+      height: 2em;
+      padding: 0;
+      display: inline-block;
+      float: left; }
+    #search-field fieldset input {
+      font-size: 0.8em;
+      background-image: url(../../images/search.png);
+      background-repeat: no-repeat;
+      background-size: 1.4em 1.4em;
+      background-position: left;
+      text-indent: 1.7em;
+      color: #666;
+      z-index: 2;
+      border: 0 none; }
+      #search-field fieldset input:focus {
+        outline: 0 none; }
+
 #map__environment {
   height: 80vh;
   display: -webkit-box;
