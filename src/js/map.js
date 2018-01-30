@@ -1,7 +1,8 @@
+
 var country;
 jQuery(document).ready(function () {
-  getColors = function () {
-    let colors = {},
+  getColors = function getColors() {
+    var colors = {},
         key;
     for (key in map.regions) {
       colors[key] = ['#115876'];
@@ -17,7 +18,7 @@ jQuery(document).ready(function () {
         attribute: 'fill'
       }]
     },
-    onRegionClick: function (event, code) {
+    onRegionClick: function onRegionClick(event, code) {
       window.location.href = "comparison.html?country=" + code;
       country = code;
     }
