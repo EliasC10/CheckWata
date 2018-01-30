@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "description": "A MultiMediaProject 2a, to get the world wide water consumption",
   "main": "index.js",
+  "scripts": {
+    "build":"./node_modules/.bin/babel src -d lib"
+  },
   "dependencies": {
+    "d3": "^4.13.0",
     "gulp": "^3.9.1",
     "gulp-html": "^0.4.7",
     "gulp-rename": "^1.2.2",
     "jquery": "^3.3.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.18.12",
@@ -29,9 +34,6 @@
     "jshint": "^2.9.5",
     "jshint-stylish": "^2.2.1",
     "run-sequence": "^2.0.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
