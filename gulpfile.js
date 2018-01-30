@@ -15,6 +15,7 @@ var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 
 var babel = require("gulp-babel");
+var jquery = require('gulp-jquery');
 
 
 // SASS to CSS
@@ -41,6 +42,14 @@ gulp.task('js', function() {
   return gulp.src([src + '/js/lib/*.js', src + '/js/*.js', notjssrc])
    .pipe(babel())
    .pipe(gulp.dest(src + "/js/"));
+});
+
+gulp.task('jquery', function () {
+    return gulp.src('./node_modules/jquery/src')
+        .pipe(jquery({
+            flags: ['-deprecated', '-event/alias', '-ajax/script', '-ajax/jsonp', '-exports/global']
+        }))
+        .pipe(gulp.dest('./src/jquery'));
 });
 
 // minify js

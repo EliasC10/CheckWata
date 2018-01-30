@@ -4,7 +4,8 @@
   "description": "A MultiMediaProject 2a, to get the world wide water consumption",
   "main": "index.js",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-jquery": "^1.1.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
