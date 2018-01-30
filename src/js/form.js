@@ -1,7 +1,7 @@
 'use strict';
 
 function check_empty() {
-  if (document.getElementById('shower').value == "" || document.getElementById('dishwasher').value == "" || document.getElementById('laundry').value == "") {
+  if (document.getElementById('shower').value == "" || document.getElementById('dishwasher').value == "" || document.getElementById('laundry').value == "" || document.getElementById('bath').value == "") {
     alert("Fill All Fields !");
   } else {
     document.getElementById('form').submit();
@@ -10,9 +10,9 @@ function check_empty() {
 }
 
 function div_show() {
-  document.getElementById('abc').style.display = "block";
+  document.getElementById('form_main').style.display = "block";
 }
 
 function div_hide() {
-  document.getElementById('abc').style.display = "none";
+  document.getElementById('form_main').style.display = "none";
 }

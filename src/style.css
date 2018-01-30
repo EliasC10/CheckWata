@@ -196,7 +196,7 @@ nav {
   display: flex;
   justify-content: center; }
 
-#abc {
+#form_main {
   width: 100%;
   height: 100%;
   opacity: .95;
@@ -231,7 +231,7 @@ img#close {
   top: -8px;
   cursor: pointer; }
 
-div#popupContact {
+div#popup_form {
   width: 40%;
   text-align: center;
   margin-left: 30%;
@@ -245,7 +245,7 @@ div#popupContact {
 p {
   margin-top: 30px; }
 
-#popupContact h2 {
+#popup_form h2 {
   padding: 20px 35px;
   margin: -10px -50px;
   text-align: center;
