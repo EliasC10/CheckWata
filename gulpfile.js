@@ -21,7 +21,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('html', function() {
   return gulp.src('src/*.html')
-  .pipe(validator())
+
   .pipe(gulp.dest('dist/'));
 });
 
@@ -44,7 +44,7 @@ gulp.task('styles', function(){
     }}))
     .pipe(sass())
     .pipe(autoprefixer('last 2 versions'))
-    .pipe(gulp.dest('dist/styles/'))
+    .pipe(gulp.dest('dist/'))
     .pipe(browserSync.reload({stream:true}))
 });
 
@@ -57,10 +57,10 @@ gulp.task('scripts', function(){
     }}))
     .pipe(concat('main.js'))
     .pipe(babel())
-    .pipe(gulp.dest('dist/scripts/'))
+    .pipe(gulp.dest('dist/js/'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/scripts/'))
+    .pipe(gulp.dest('dist/js/'))
     .pipe(browserSync.reload({stream:true}))
 });
 
