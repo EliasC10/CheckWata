@@ -20,7 +20,7 @@
   </header>
 
   <div id="form_main">
-    <form action="#" id="form" method="post" name="form">
+    <form action="javascript:store()" id="form" name="form">
     <div id="popup_form">
         <img id="close" src="images/close.png" onclick ="div_hide()">
         <h2>Your Data</h2>
@@ -36,11 +36,11 @@
             <li><select id="shower" name="shower" class="1-20"></select></li>
             <li><select id="laundry" name="laundry" class="1-20"></select></li>
             <li><select id="dishwasher" name="dishwasher" class="1-20"></select></li>
-            <li><input id="vegetarian" name="vegetarian" type="checkbox"></input></li>
+            <li><select id="vegetarian" name="vegetarian"><option>yes</option><option>no</option></select></li>
           </ul>
         </section>
         <div class="bttn__wrapper" id="button_wrapper">
-          <a href="javascript:%20check_empty()" class="bttn__form" id="submit">SAVE</a>
+          <a href="javascript:%20check_empty()" class="bttn__form" id="submit" type="submit">SAVE</a>
         </div>
       </form>
     </div>
@@ -69,13 +69,28 @@
     </article>
   </section>
 
-<script>
+<script type="text/javascript">
   $(function(){
-    var $select = $(".1-20");
+    let $select = $(".1-20");
     for (i=1;i<=20;i++){
         $select.append($('<option></option>').val(i).html(i))
     }
-});
+  });
+
+  function store(){
+      let shower = document.getElementById("shower");
+      localStorage.setItem("shower", shower.value);
+
+      let laundry = document.getElementById("laundry");
+      localStorage.setItem("laundry", laundry.value);
+
+      let dishwasher = document.getElementById("dishwasher");
+      localStorage.setItem("dishwasher", dishwasher.value);
+
+      let vegetarian = document.getElementById("vegetarian");
+      localStorage.setItem("vegetarian", vegetarian.value);
+      console.log(localStorage.getItem("vegetarian", vegetarian.value))
+      };
 </script>
 
 </body>
