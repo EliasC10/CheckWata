@@ -8,9 +8,9 @@ function check_empty() {
 }
 
 function div_show() {
-  document.getElementById('abc').style.display = "block";
+  document.getElementById('form_main').style.display = "block";
 }
 
 function div_hide() {
-  document.getElementById('abc').style.display = "none";
+  document.getElementById('form_main').style.display = "none";
 }
