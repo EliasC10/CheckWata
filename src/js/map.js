@@ -1,3 +1,5 @@
+
+
 var country;
 jQuery(document).ready(function () {
   getColors = function getColors() {
@@ -19,6 +21,7 @@ jQuery(document).ready(function () {
     },
     onRegionClick: function onRegionClick(event, code) {
       window.location.href = "comparison.html?country=" + code;
+      showGauge();
       country = code;
     }
   });
