@@ -22,10 +22,11 @@
   <section id="graphics">
     <div class="svgbox">
       <h2 id="countryName"></h2>
+      <p id="countryConsumption"></p>
       <svg id="fillgauge1"></svg>
     </div>
     <div class="svgbox">
-      <h2>Du</h2>
+      <h2>[name]</h2>
       <svg id="fillgauge2"></svg>
     </div>
   </section>
@@ -45,6 +46,7 @@
     countrydata.forEach(function(element) {
       if(country == element.code){
         document.getElementById('countryName').innerHTML = element.name
+        document.getElementById('countryConsumption').innerHTML = element.avg
       }
     });
   </script>
