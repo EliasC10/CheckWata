@@ -27,16 +27,16 @@
         <section id="form_wrapper">
           <ul id="data_name">
             <li><p>Shower p. Week</p></li>
+            <li><p>Bath p. Week</p></li>
             <li><p>Laundry p. Week</p></li>
             <li><p>Dishwasher p. Week</p></li>
-            <li><p>Vegetarian</p></li>
           </ul>
 
           <ul id="data_form">
             <li><select id="shower" name="shower" class="1-20"></select></li>
+            <li><select id="bath" name="bath" class="1-20"></select></li>
             <li><select id="laundry" name="laundry" class="1-20"></select></li>
             <li><select id="dishwasher" name="dishwasher" class="1-20"></select></li>
-            <li><select id="vegetarian" name="vegetarian"><option>yes</option><option>no</option></select></li>
           </ul>
         </section>
         <div class="bttn__wrapper" id="button_wrapper">
@@ -87,9 +87,9 @@
       let dishwasher = document.getElementById("dishwasher");
       localStorage.setItem("dishwasher", dishwasher.value);
 
-      let vegetarian = document.getElementById("vegetarian");
-      localStorage.setItem("vegetarian", vegetarian.value);
-      console.log(localStorage.getItem("vegetarian", vegetarian.value))
+      let bath = document.getElementById("bath");
+      localStorage.setItem("bath", bath.value);
+      console.log(localStorage.getItem("bath", bath.value))
       };
 </script>
 
