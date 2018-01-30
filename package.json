@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "gulp": "^3.9.1",
+    "gulp-html": "^0.4.7",
     "gulp-rename": "^1.2.2"
   },
   "devDependencies": {

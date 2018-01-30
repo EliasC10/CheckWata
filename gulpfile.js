@@ -9,6 +9,7 @@ var imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
+var validator = require('gulp-html');
 
 gulp.task('browser-sync', function() {
   browserSync({
@@ -16,6 +17,12 @@ gulp.task('browser-sync', function() {
        baseDir: "./src"
     }
   });
+});
+
+gulp.task('html', function() {
+  return gulp.src('src/*.html')
+  .pipe(validator())
+  .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('bs-reload', function () {
@@ -60,5 +67,7 @@ gulp.task('scripts', function(){
 gulp.task('default', ['browser-sync'], function(){
   gulp.watch("src/sass/**/*.scss", ['styles']);
   gulp.watch("src/js/**/*.js", ['scripts']);
-  gulp.watch("src/*.html", ['bs-reload']);
+  gulp.watch("src/*.html", ['html']);
 });
+
+gulp.task('build', ['scripts', 'styles', 'images', 'html'] );
