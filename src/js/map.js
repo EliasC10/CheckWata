@@ -1,10 +1,9 @@
-'use strict';
 
 var country;
 jQuery(document).ready(function () {
   getColors = function getColors() {
     var colors = {},
-        key = void 0;
+        key;
     for (key in map.regions) {
       colors[key] = ['#115876'];
     }
