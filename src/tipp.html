@@ -33,10 +33,10 @@
           </ul>
 
           <ul id="data_form">
-            <li><select id="shower" name="shower" class="1-20"></select></li>
-            <li><select id="bath" name="bath" class="1-20"></select></li>
-            <li><select id="laundry" name="laundry" class="1-20"></select></li>
-            <li><select id="dishwasher" name="dishwasher" class="1-20"></select></li>
+            <li><select id="shower" name="shower" class="0-20"></select></li>
+            <li><select id="bath" name="bath" class="0-20"></select></li>
+            <li><select id="laundry" name="laundry" class="0-20"></select></li>
+            <li><select id="dishwasher" name="dishwasher" class="0-20"></select></li>
           </ul>
         </section>
         <div class="bttn__wrapper" id="button_wrapper">
@@ -71,8 +71,8 @@
 
 <script type="text/javascript">
   $(function(){
-    let $select = $(".1-20");
-    for (i=1;i<=20;i++){
+    let $select = $(".0-20");
+    for (i=0;i<=20;i++){
         $select.append($('<option></option>').val(i).html(i))
     }
   });
@@ -89,7 +89,6 @@
 
       let bath = document.getElementById("bath");
       localStorage.setItem("bath", bath.value);
-      console.log(localStorage.getItem("bath", bath.value))
       };
 </script>
 
