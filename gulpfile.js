@@ -43,7 +43,7 @@ gulp.task('styles', function(){
     }}))
     .pipe(sass())
     .pipe(autoprefixer('last 2 versions'))
-    .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest('src/'))
     .pipe(browserSync.reload({stream:true}))
 });
 
@@ -66,7 +66,7 @@ gulp.task('scripts', function(){
 gulp.task('default', ['browser-sync'], function(){
   gulp.watch("src/sass/**/*.scss", ['styles']);
   gulp.watch("src/js/**/*.js", ['scripts']);
-  gulp.watch("src/*.html", ['html']);
+  gulp.watch("src/*.html", ['bs-reload'] ['html']);
 });
 
 gulp.task('build', ['scripts', 'styles', 'images', 'html'] );

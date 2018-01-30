@@ -1,3 +1,39 @@
+#search-field {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2.5%;
+  fieldset{
+    position: relative;
+    display: inline-block;
+    padding: 0 0.3em;
+    background: white;
+    border: 1px solid $primaryblue;
+    border-radius: 5px;
+    input {
+      position: relative;
+      width: 14em;
+      height: 2em;
+      padding: 0;
+      display: inline-block;
+      float: left;
+    }
+    input {
+      font-size: 0.8em;
+      background-image: url(../../images/search.png);
+      background-repeat: no-repeat;
+      background-size: 1.4em 1.4em;
+      background-position: left;
+      text-indent: 1.7em;
+      color: #666;
+      z-index: 2;
+      border: 0 none;
+      &:focus {
+        outline: 0 none;
+      }
+    }
+  }
+}
+
 #map__environment {
   height:80vh;
   display: flex;
@@ -6,7 +42,7 @@
 }
 
 #map {
-  width: 95%; 
+  width: 95%;
   height: 95%;
 }
 
@@ -14,4 +50,3 @@
   display: flex;
   justify-content: center;
 }
-
