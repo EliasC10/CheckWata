@@ -46,11 +46,8 @@
     countrydata.forEach(function(element) {
       if(country == element.code){
         document.getElementById('countryName').innerHTML = element.name
-<<<<<<< HEAD
-        document.getElementById('text').innerHTML = `The average water consumption of a citizen in ${element.name} is ${element.avg} liters`;
-=======
         document.getElementById('countryConsumption').innerHTML = element.avg
->>>>>>> a6e527deb5ac06e0f1a10ef1d9f070dd9411a8b2
+        document.getElementById('text').innerHTML = `The average water consumption of a citizen in ${element.name} is ${element.avg} liters`;
       }
     });
 
