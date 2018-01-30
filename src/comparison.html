@@ -30,7 +30,7 @@
     </div>
   </section>
   <section  id="textbox">
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    <p id="text"></p>
   </section>
   <section class="button--right">
     <div class="bttn__wrapper">
@@ -45,8 +45,10 @@
     countrydata.forEach(function(element) {
       if(country == element.code){
         document.getElementById('countryName').innerHTML = element.name
+        document.getElementById('text').innerHTML = `The average water consumption of a citizen in ${element.name} is ${element.avg} liters`;
       }
     });
+
   </script>
 </body>
 </html>
