@@ -21,7 +21,6 @@ gulp.task('browser-sync', function() {
 
 gulp.task('html', function() {
   return gulp.src('src/*.html')
-
   .pipe(gulp.dest('dist/'));
 });
 

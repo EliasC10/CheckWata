@@ -1,4 +1,3 @@
-
 var country;
 jQuery(document).ready(function () {
   getColors = function getColors() {
