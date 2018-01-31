@@ -7,7 +7,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     entry: {
       'page1': './src/index.js',
-      'page2': './src/comparison.js'
+      'page2': './src/comparison.js',
+      'page3': './src/tipp.js'
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
@@ -22,6 +23,12 @@ module.exports = {
           chunks: ['page2'],
           filename: 'comparison.html',
           template: 'src/comparison.html'
+        }),
+        new HtmlWebpackPlugin({
+          title: 'Tipps',
+          chunks: ['page3'],
+          filename: 'tipp.html',
+          template: 'src/tipp.html'
         }),
         new webpack.ProvidePlugin({
           $ : 'jquery',

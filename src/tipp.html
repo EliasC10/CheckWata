@@ -4,25 +4,22 @@
   <title>CheckWata</title>
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Barlow:300,300i,500,500i,900" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="js/form.js"></script>
-  <script src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
   <header id='navigation'>
   <nav>
-    <a href="index.html"><img src="images/logo_blue.png" alt="logo"></a>
+    <a href="index.html"><img id="logo_blue" alt="logo"></a>
     <ul>
-      <li><a id="popup" class="medium" href="javascript:div_show()">CHECKNOW</a></li>
+      <li><a id="popup" class="medium" href="#">CHECKNOW</a></li>
       <li><a class="medium" href="#">TIPPS</a></li>
     </ul>
   </nav>
   </header>
 
   <div id="form_main">
-    <form action="javascript:store()" id="form" name="form">
+    <form action="#" id="form" name="form">
     <div id="popup_form">
-        <img id="close" src="images/close.png" alt="close" onclick ="div_hide()">
+        <img id="close" alt="close">
         <h2>Your Data</h2>
         <section id="form_wrapper">
           <ul id="data_name">
@@ -40,7 +37,7 @@
           </ul>
         </section>
         <div class="bttn__wrapper" id="button_wrapper">
-          <a href="javascript:%20check_empty()" class="bttn__form" id="submit" type="submit">SAVE</a>
+          <a href="index.html" class="bttn__form" id="submit" type="submit">SAVE</a>
         </div>
       </div>
     </form>
@@ -68,29 +65,5 @@
       </ul>
     </article>
   </section>
-
-<script type="text/javascript">
-  $(function(){
-    let $select = $(".0-20");
-    for (i=0;i<=20;i++){
-        $select.append($('<option></option>').val(i).html(i))
-    }
-  });
-
-  function store(){
-      let shower = document.getElementById("shower");
-      localStorage.setItem("shower", shower.value);
-
-      let laundry = document.getElementById("laundry");
-      localStorage.setItem("laundry", laundry.value);
-
-      let dishwasher = document.getElementById("dishwasher");
-      localStorage.setItem("dishwasher", dishwasher.value);
-
-      let bath = document.getElementById("bath");
-      localStorage.setItem("bath", bath.value);
-      };
-</script>
-
 </body>
 </html>
