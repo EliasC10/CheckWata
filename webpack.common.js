@@ -5,12 +5,23 @@ const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+      'page1': './src/index.js',
+      'page2': './src/comparison.js'
+    },
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'Production',
-            template: path.join(__dirname, './src/index.html')
+            title: 'Index',
+            chunks: ['page1'],
+            filename: 'index.html',
+            template: 'src/index.html'
+        }),
+        new HtmlWebpackPlugin({
+          title: 'Comparison',
+          chunks: ['page2'],
+          filename: 'comparison.html',
+          template: 'src/comparison.html'
         }),
         new webpack.ProvidePlugin({
           $ : 'jquery',
@@ -22,7 +33,7 @@ module.exports = {
     ],
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: './dist/index.[hash].js'
+        filename: './dist/[name].[hash].js'
   },
 
   externals: {

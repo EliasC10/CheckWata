@@ -19,8 +19,6 @@ request.onreadystatechange = function(response) {
     }
   }
 }
-request.open('GET', 'countries_search.json', true)
-request.send()
 
 
 userInput.addEventListener("keydown", function(e){
@@ -31,10 +29,12 @@ userInput.addEventListener("keydown", function(e){
 })
 
 function search(e){
-  let countrydata = JSON.parse(countries)
+  let countrydata = JSON.parse(request.responseText)
   countrydata.forEach(function(element) {
     if(e.target.value.toLowerCase() == element.name.toLowerCase()){
       window.location.href = "/comparison.html?country=" + element.code
     }
   })
 }
+request.open('GET', 'countries_search.json', true)
+request.send()
