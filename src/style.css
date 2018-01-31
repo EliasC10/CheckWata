@@ -400,7 +400,9 @@ a.bttn__form {
   border-radius: 5px;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#115876), to(#e7f0fd));
   background-image: linear-gradient(to top, #115876 0%, #e7f0fd 100%);
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: -1;
+  margin-top: 15%; }
 
 .wave {
   width: 150%;
@@ -408,7 +410,7 @@ a.bttn__form {
   position: absolute;
   top: -25%;
   left: -20%;
-  margin-top: -117%;
+  margin-top: -100%;
   border-radius: 35%;
   background: #E7E7E7;
   -webkit-animation: wave 15s infinite linear;
