@@ -2,37 +2,23 @@ import $ from 'jquery';
 
 var country;
 $(function () {
-
-  var getColors = function getColors() {
-    var colors = {},
-        key;
-    for (key in map.regions) {
-      colors[key] = ['#115876'];
-    }
-    return colors;
-  }, map;
-
-  map = $('#map').vectorMap({
+  $('#map').vectorMap({
     map: 'world_mill',
-    container: $('#map'),
-    series: {
-      regions: [{
-        attribute: 'fill'
-      }]
+    regionStyle: {
+        initial: {
+            fill: '#115876',
+            "fill-opacity": 1,
+            stroke: 'none',
+            "stroke-width": 0,
+            "stroke-opacity": 1
+        },
+        hover: {
+            "fill-opacity": 0.8
+        }
     },
     onRegionClick: function onRegionClick(event, code) {
       window.location.href = "comparison.html?country=" + code;
-      //showGauge();
       country = code;
     }
   });
-  map.series.regions[0].setValues(getColors());
 });
-
-
-/*  $(function(){
-    $('#map').vectorMap({
-      map: 'world_mill'
-    });
-  })
-map = new jvm.Map*/
