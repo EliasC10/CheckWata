@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 var country;
 $(function () {
   $('#map').vectorMap({

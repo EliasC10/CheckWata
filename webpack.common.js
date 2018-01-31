@@ -25,7 +25,8 @@ module.exports = {
         }),
         new webpack.ProvidePlugin({
           $ : 'jquery',
-          jQuery : 'jquery'
+          jQuery : 'jquery',
+          d3 : 'd3'
         }),
         new CopyWebpackPlugin([
           {from: './src/json/countries_search.json'}
