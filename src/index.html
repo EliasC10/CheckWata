@@ -21,7 +21,8 @@
   <section id="search-field"> 
     <form>
       <fieldset>
-        <input type="search" placeholder="Search country" id="user-input">
+        <input type="search" placeholder="Search country" id="user-input" list="country--autocomplete">
+        <datalist id="country--autocomplete"></datalist>
       </fieldset>
     </form>
   </section>
@@ -35,16 +36,16 @@
       <a href="checknow.html" class="bttn">Check Now</a>
     </div>
   </section>
-
+<!--
   <div class="wrapper">
     <div class="wave"></div>
-  </div>
+  </div>-->
   
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery.jvectormap.min.js"></script>
   <script src="js/jquery-jvectormap-world-mill.js"></script>
-  <script src="js/search.js"></script>
   <script src="js/map.js"></script>
   <script src="json/countries.json"></script>
+  <script src="js/search.js"></script>
 </body>
 </html>
