@@ -11,7 +11,6 @@ request.onreadystatechange = function(response) {
         option.value = item.name;
         dataList.appendChild(option)
       })
-      userInput.placeholder = "country"
     }
     else{
       userInput.placeholder = "Could not load datalist options"
