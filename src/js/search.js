@@ -5,7 +5,7 @@ let userInput = document.getElementById('user-input')
 let request = new XMLHttpRequest()
 request.onreadystatechange = function(response) {
   if(request.readyState === 4) {//done
-    if(request.status === 404){ console.log('wtf');}
+    if(request.status === 404){ console.log('not found');}
     else if(request.status === 200){ //OK
       let jsonOptions = JSON.parse(request.responseText)
       jsonOptions.forEach(function(item) {

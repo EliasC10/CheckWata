@@ -2,7 +2,7 @@ import $ from 'jquery';
 
 var country;
 $(function () {
-  
+
   var getColors = function getColors() {
     var colors = {},
         key;
