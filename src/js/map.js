@@ -1,7 +1,8 @@
 import $ from 'jquery';
 
-/*var country;
+var country;
 $(function () {
+  
   var getColors = function getColors() {
     var colors = {},
         key;
@@ -10,12 +11,8 @@ $(function () {
     }
     return colors;
   }, map;
-*/
-  $(function(){
-    $('#map').vectorMap({map: 'world_mill'});
-  })
 
-  /*map = new jvm.Map({
+  map = $('#map').vectorMap({
     map: 'world_mill',
     container: $('#map'),
     series: {
@@ -25,10 +22,17 @@ $(function () {
     },
     onRegionClick: function onRegionClick(event, code) {
       window.location.href = "comparison.html?country=" + code;
-      showGauge();
+      //showGauge();
       country = code;
     }
   });
   map.series.regions[0].setValues(getColors());
 });
-*/
+
+
+/*  $(function(){
+    $('#map').vectorMap({
+      map: 'world_mill'
+    });
+  })
+map = new jvm.Map*/
