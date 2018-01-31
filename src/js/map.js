@@ -1,8 +1,8 @@
+import $ from 'jquery';
 
-
-var country;
-jQuery(document).ready(function () {
-  getColors = function getColors() {
+/*var country;
+$(function () {
+  var getColors = function getColors() {
     var colors = {},
         key;
     for (key in map.regions) {
@@ -10,8 +10,12 @@ jQuery(document).ready(function () {
     }
     return colors;
   }, map;
+*/
+  $(function(){
+    $('#map').vectorMap({map: 'world_mill'});
+  })
 
-  map = new jvm.Map({
+  /*map = new jvm.Map({
     map: 'world_mill',
     container: $('#map'),
     series: {
@@ -27,3 +31,4 @@ jQuery(document).ready(function () {
   });
   map.series.regions[0].setValues(getColors());
 });
+*/

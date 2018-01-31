@@ -5,7 +5,6 @@
  *
  * Liquid Fill Gauge v1.1
  */
-import * as d3 from "d3";
 
 export function showGauge() {
   var gauge1 = loadLiquidFillGauge("fillgauge1, 55");
