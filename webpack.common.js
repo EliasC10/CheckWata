@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -14,11 +15,18 @@ module.exports = {
         new webpack.ProvidePlugin({
           $ : 'jquery',
           jQuery : 'jquery'
-        })
+        }),
+        new CopyWebpackPlugin([
+          {from: './src/json/countries_search.json'}
+        ])
     ],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: './dist/index.[hash].js'
+  },
+
+  externals: {
+    './countries_search.json' : "require('./dist/json/countries_search.json')"
   },
 
   module: {
@@ -54,7 +62,11 @@ module.exports = {
       {
           test: /\.svg$/,
           loader: 'svg-inline-loader'
-   }
+   },
+   {
+        test: /\.json$/,
+        loader: 'json-loader'
+      }
     ]
   }
   };

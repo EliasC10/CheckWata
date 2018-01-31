@@ -1,10 +1,12 @@
+
 let dataList = document.getElementById('country--autocomplete')
 let userInput = document.getElementById('user-input')
 
 let request = new XMLHttpRequest()
 request.onreadystatechange = function(response) {
   if(request.readyState === 4) {//done
-    if(request.status === 200){ //OK
+    if(request.status === 404){ console.log('wtf');}
+    else if(request.status === 200){ //OK
       let jsonOptions = JSON.parse(request.responseText)
       jsonOptions.forEach(function(item) {
         let option = document.createElement('option')
@@ -17,7 +19,7 @@ request.onreadystatechange = function(response) {
     }
   }
 }
-request.open('GET', 'json/countries_search.json', true)
+request.open('GET', 'countries_search.json', true)
 request.send()
 
 
