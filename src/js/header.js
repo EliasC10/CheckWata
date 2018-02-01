@@ -10,7 +10,7 @@ document.getElementById('header').innerHTML="\
     <nav>\
       <a href='index.html'><img id='logo_blue' alt='logo'></a>\
       <ul>\
-        <li><a class='medium' id='popup' class='medium' href='#'>CHECKNOW</a></li>\
+        <li><a class='medium' id='popup' href='#'>CHECKNOW</a></li>\
         <li><a class='medium' href='./tipp.html'>TIPPS</a></li>\
       </ul>\
     </nav>\
