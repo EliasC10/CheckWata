@@ -14,6 +14,7 @@
        The average European needs <strong>2 liters</strong> for trinking,
        <strong>2 litres</strong> for cooking,
        <strong>13 litres</strong> for personal hygiene,
+       <strong>40 litres</strong> for toilet flushing
        and <strong>9 litres</strong> for cleaning/houshold.
        Your personal weekly calculation results:
        You need <strong>${calculateShower()} litres</strong> per week for taking showers,
