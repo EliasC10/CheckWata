@@ -34,7 +34,8 @@ const open_popup = document.getElementById('popup');
     });
 
 let path = location.href;
-if(path.substring(path.length - 10) === 'index.html') {
+
+if(path.substring(path.length - 10) === 'index.html' || path.substring(path.length - 5) !== '.html') {
   const open_popup_button = document.getElementById('popup_button');
     popup_button.addEventListener('click', () => {
       div_show();
