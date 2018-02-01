@@ -1,7 +1,6 @@
 pages:
   script:
   - gem install jekyll
-  - npm install
   - jekyll build -s 'dist' -d public
   artifacts:
     paths:
