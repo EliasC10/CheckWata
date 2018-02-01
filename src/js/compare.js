@@ -8,15 +8,16 @@
     if(country == element.code){
       document.getElementById('countryName').innerHTML = element.name
       document.getElementById('text').innerHTML =
-      `The average daily water consumption of a citizen in ${element.name} is <strong>${element.avg} liters</strong>.<br><br>
+      `The average daily water consumption of a citizen in ${element.name} is <strong>${element.avg} liters</strong>.<br>
+       Attention: This data are influenced by industry and aggriculture in ${element.name}. The measurement values may fluctuate highly.<br><br>
        Your Calulation is split up in constant and flexible values.
        The average European needs <strong>2 liters</strong> for trinking,
        <strong>2 litres</strong> for cooking,
        <strong>13 litres</strong> for personal hygiene,
        and <strong>9 litres</strong> for cleaning/houshold.
        Your personal weekly calculation results:
-       You need <strong>${calculateShower()} litres</strong> per week for talking showers,
-       <strong>${calculateBath()} litres</strong> per week for talking a baths,
+       You need <strong>${calculateShower()} litres</strong> per week for taking showers,
+       <strong>${calculateBath()} litres</strong> per week for taking a baths,
        <strong>${calculateDishwasher()} litres</strong> per week for the dishwasher,
        <strong>${calculateLaundry()} litres</strong> per week for the laundry.<br><br>
        Your average daily water consumption amounts to <strong>${calculateDaily()} litres</strong> <br><br>
@@ -57,6 +58,10 @@
     let dishwasher = Math.round(calculateDishwasher() / 7)
     let result =  Math.round(fixValues + shower + bath + laundry + dishwasher)
     return result
+  }
+
+  if(localStorage.getItem("name") !== null){
+    document.getElementById('input_name').innerHTML = localStorage.getItem("name");
   }
 
   export function calculatePerson() {

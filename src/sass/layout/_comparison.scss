@@ -7,13 +7,13 @@
   display: flex;
   justify-content: space-around;
   text-align: center;
-  
+
   #fillgauge1 {
     margin:2%;
     display: flex;
     justify-content: center;
   }
-  
+
   #fillgauge2 {
     margin: 2%;
     display: flex;
@@ -23,6 +23,10 @@
 #textbox {
   margin: 20vh;
   text-align: justify;
+}
+
+#source {
+  font-size: 0.8em;
 }
 
 .button--right{
