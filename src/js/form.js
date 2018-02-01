@@ -33,12 +33,13 @@ const open_popup = document.getElementById('popup')
     div_show()
     })
 
-let path = location.href;
-if(path.substring(path.length - 10) === 'index.html' || path.substring(path.length - 5) !== '.html') {
+
+if(document.getElementById('popup_button') !== null)  {
   const open_popup_button = document.getElementById('popup_button');
     popup_button.addEventListener('click', () => {
       div_show()
-    })}
+    })
+  }
 
 const close_popup = document.getElementById('close')
   close_popup.addEventListener('click', () => {
