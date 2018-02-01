@@ -1,6 +1,24 @@
+.svgbox {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
 #graphics{
   display: flex;
+  justify-content: space-around;
   text-align: center;
+  
+  #fillgauge1 {
+    margin:2%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #fillgauge2 {
+    margin: 2%;
+    display: flex;
+    justify-content: center;
+  }
 }
 #textbox {
   margin: 20vh;
