@@ -12,5 +12,7 @@ import './js/map.js';
 import './js/search.js';
 import './js/header.js';
 import './js/footer.js';
+import './js/form.js';
 
 document.getElementById('logo_blue').src = Logo;
+document.getElementById('close').src = Close;
