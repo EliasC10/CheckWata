@@ -29,6 +29,9 @@ $(function(){
 });
 
 function store(){
+    let name = document.getElementById("name");
+    localStorage.setItem("name", name.value);
+
     let shower = document.getElementById("shower");
     localStorage.setItem("shower", shower.value);
 
