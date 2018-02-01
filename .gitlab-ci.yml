@@ -1,0 +1,11 @@
+pages:
+  script:
+  - gem install jekyll
+  - npm install
+  - npm run build
+  - jekyll build -s 'dist' -d public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
