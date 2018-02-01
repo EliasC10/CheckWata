@@ -32,7 +32,12 @@ function search(e){
   let countrydata = JSON.parse(request.responseText)
   countrydata.forEach(function(element) {
     if(e.target.value.toLowerCase() == element.name.toLowerCase()){
-      window.location.href = "/mmp2a_checkwata/comparison.html?country=" + element.code
+      if(location.href.substring(7) === "0.0.0.0:8080/"){ //if on localhost, other path than pages
+        window.location.href = "/comparison.html?country=" + element.code
+      }
+      else {
+        window.location.href = "/mmp2a_checkwata/comparison.html?country=" + element.code
+      }
     }
   })
 }
