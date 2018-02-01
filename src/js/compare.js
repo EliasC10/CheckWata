@@ -1,6 +1,7 @@
 
   import all from '../json/countries_search.json';
 
+  let average
   let url = new URL(window.location.href)
   let country = url.searchParams.get('country')
   all.forEach(function(element) {
@@ -20,6 +21,7 @@
        <strong>${calculateLaundry()} litres</strong> per week for the laundry.<br><br>
        Your average daily water consumption amounts to <strong>${calculateDaily()} litres</strong> <br><br>
        Check out your personal tipps how you can make the world be a better place.`;
+       average = element.avg
     }
   });
 
@@ -56,3 +58,9 @@
     let result =  Math.round(fixValues + shower + bath + laundry + dishwasher)
     return result
   }
+
+  export function calculatePerson() {
+    let value = calculateDaily()
+    return value
+  }
+  export { average as average }

@@ -8,9 +8,11 @@
  */
 
 import * as d3 from 'd3'
+import {calculatePerson} from './compare'
+import {average} from './compare'
 
  $( document ).ready(function() {
-  var gauge1 = loadLiquidFillGauge("fillgauge1", 55);
+  var gauge1 = loadLiquidFillGauge("fillgauge1", average);
   var config1 = liquidFillGaugeDefaultSettings();
   config1.circleColor = "#115876";
   config1.textColor = "#312F30";
@@ -20,7 +22,7 @@ import * as d3 from 'd3'
   config1.textVertPosition = 0.2;
   config1.waveAnimateTime = 1000;
 
-  var gauge2 = loadLiquidFillGauge("fillgauge2", 20);
+  var gauge2 = loadLiquidFillGauge("fillgauge2", calculatePerson());
   var config2 = liquidFillGaugeDefaultSettings();
   config2.circleColor = "#47A8D2";
   config2.textColor = "#312F30";
@@ -34,7 +36,7 @@ import * as d3 from 'd3'
 function liquidFillGaugeDefaultSettings(){
     return {
         minValue: 0, // The gauge minimum value.
-        maxValue: 100, // The gauge maximum value.
+        maxValue: 500, // The gauge maximum value.
         circleThickness: 0.05, // The outer circle thickness as a percentage of it's radius.
         circleFillGap: 0.05, // The size of the gap between the outer circle and wave circle as a percentage of the outer circles radius.
         circleColor: "#115876", // The color of the outer circle.
@@ -80,7 +82,7 @@ function loadLiquidFillGauge(elementId, value, config) {
     const textPixels = (config.textSize*radius/2);
     const textFinalValue = parseFloat(value).toFixed(2);
     const textStartValue = config.valueCountUp?config.minValue:textFinalValue;
-    const percentText = config.displayPercent?"%":"";
+    const percentText = config.displayPercent?" L":"";
     const circleThickness = config.circleThickness * radius;
     const circleFillGap = config.circleFillGap * radius;
     const fillCircleMargin = circleThickness + circleFillGap;
