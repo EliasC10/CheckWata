@@ -1,5 +1,5 @@
 
-  import all from '../json/countries_search.json';
+  import all from '../json/countries_search.json'
 
   let average
   let url = new URL(window.location.href)
@@ -22,10 +22,10 @@
        <strong>${calculateDishwasher()} litres</strong> per week for the dishwasher,
        <strong>${calculateLaundry()} litres</strong> per week for the laundry.<br><br>
        Your average daily water consumption amounts to <strong>${calculateDaily()} litres</strong> <br><br>
-       Check out your personal tipps how you can make the world be a better place.`;
+       Check out your personal tipps how you can make the world be a better place.`
        average = element.avg
     }
-  });
+  })
 
   function calculateShower() {
     let numbShower = localStorage.getItem("shower")
@@ -62,7 +62,7 @@
   }
 
   if(localStorage.getItem("name") !== null){
-    document.getElementById('input_name').innerHTML = localStorage.getItem("name");
+    document.getElementById('input_name').innerHTML = localStorage.getItem("name")
   }
 
   export function calculatePerson() {
