@@ -32,7 +32,7 @@ function search(e){
   let countrydata = JSON.parse(request.responseText)
   countrydata.forEach(function(element) {
     if(e.target.value.toLowerCase() == element.name.toLowerCase()){
-      window.location.href = "./comparison.html?country=" + element.code
+      window.location.href = "/mmp2a_checkwata/comparison.html?country=" + element.code
     }
   })
 }
