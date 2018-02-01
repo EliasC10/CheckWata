@@ -9,7 +9,7 @@
       document.getElementById('countryName').innerHTML = element.name
       document.getElementById('text').innerHTML =
       `The average daily water consumption of a citizen in ${element.name} is <strong>${element.avg} liters</strong>.<br>
-       Attention: This data are influenced by industry and aggriculture in ${element.name}. The measurement values may fluctuate highly.<br><br>
+       Attention: This data is influenced by industry and aggriculture in ${element.name}. The measurement values may fluctuate highly.<br><br>
        Your Calulation is split up in constant and flexible values.
        The average European needs <strong>2 liters</strong> for trinking,
        <strong>2 litres</strong> for cooking,
