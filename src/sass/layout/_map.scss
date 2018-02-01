@@ -2,6 +2,9 @@
   display: flex;
   justify-content: flex-end;
   padding-right: 2.5%;
+  form{
+    z-index: -1;
+  }
   fieldset{
     position: relative;
     display: inline-block;
@@ -53,7 +56,7 @@
 
 footer {
   margin: 2%;
-  
+
   a {
     text-decoration: none;
     color: $primaryblue;

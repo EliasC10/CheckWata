@@ -8,7 +8,8 @@ module.exports = {
     entry: {
       'page1': './src/index.js',
       'page2': './src/comparison.js',
-      'page3': './src/tipp.js'
+      'page3': './src/tipp.js',
+      'page4': './src/impressum.js'
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
@@ -30,6 +31,12 @@ module.exports = {
           filename: 'tipp.html',
           template: 'src/tipp.html'
         }),
+        new HtmlWebpackPlugin({
+            title: 'Impressum',
+            chunks: ['page4'],
+            filename: 'impressum.html',
+            template: 'src/impressum.html'
+          }),
         new webpack.ProvidePlugin({
           $ : 'jquery',
           jQuery : 'jquery',
