@@ -82,5 +82,5 @@ function store(){
     let bath = document.getElementById("bath")
     localStorage.setItem("bath", bath.value)
 
-    window.alert("Submitted succesfully")
+    window.alert("Submitted succesfully, now you can check your consumption by clicking on the map")
     }
