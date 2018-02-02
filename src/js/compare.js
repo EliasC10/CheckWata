@@ -60,13 +60,13 @@
     let result =  Math.round(fixValues + shower + bath + laundry + dishwasher)
     if (result === 66){
       document.getElementById('checkform').innerHTML =
-      'Click on Cheknow to compare your water consumption with people from another country';
+      'Click on CheckNow to compare your water consumption with people from another countries';
       return 0
     }
     else return result
   }
 
-  if(localStorage.getItem("name") !== null){
+  if(localStorage.getItem("name") !== null && localStorage.getItem("name") !== ""){
     document.getElementById('input_name').innerHTML = localStorage.getItem("name")
   }
 

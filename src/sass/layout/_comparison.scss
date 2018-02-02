@@ -21,7 +21,7 @@
   }
 }
 #textbox {
-  margin: 20vh 20vh 5vh 20vh;
+  margin: 10% 10% 5% 10%;
   text-align: justify;
 }
 
@@ -31,9 +31,18 @@
 
 .button--right{
   .bttn__wrapper{
-    margin-left: 75%;
-  .bttn{
-    width: 230px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 10%;
+    .bttn{
+      width: 230px;
+    }
   }
 }
+
+.checkform {
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
