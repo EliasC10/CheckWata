@@ -43,7 +43,8 @@ module.exports = {
           d3 : 'd3'
         }),
         new CopyWebpackPlugin([
-          {from: './src/json/countries_search.json'}
+          {from: './src/json/countries_search.json'},
+          {from: './src/json/tipps.json'}
         ])
     ],
     output: {

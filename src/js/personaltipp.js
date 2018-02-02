@@ -1,46 +1,55 @@
 import tipps from '../json/tipps.json'
-let tipplist = document.getElementByClassName('personal')
+let tipplist = document.getElementById('tippul')
 
-tipps.foreach(function(element){
+tipps.forEach(function(element){
   if(element.category === "general"){
     let tippelement = document.createElement('li')
     let tipptext = document.createElement('p')
-    tipptext.value = element.general
+    tipptext.innerHTML = element.text
     tippelement.appendChild(tipptext)
     tipplist.appendChild(tippelement)
     }
+
   else if(element.category === "shower"){
-    if (localstorge.getItem("shower") > 7){
+    if (localStorage.getItem("shower") > 7){
       let tippelement = document.createElement('li')
       let tipptext = document.createElement('p')
-      tipptext.value = element.shower
+      let strong = document.createElement('strong')
+      strong.innerHTML = element.text
+      tipptext.appendChild(strong)
       tippelement.appendChild(tipptext)
       tipplist.appendChild(tippelement)
   }
 }
   else if(element.category === "laundry"){
-    if (localstorge.getItem("laundry") > 2){
+    if (localStorage.getItem("laundry") > 2){
       let tippelement = document.createElement('li')
       let tipptext = document.createElement('p')
-      tipptext.value = element.laundry
+      let strong = document.createElement('strong')
+      strong.innerHTML = element.text
+      tipptext.appendChild(strong)
       tippelement.appendChild(tipptext)
       tipplist.appendChild(tippelement)
   }
 }
   else if(element.category === "dishwasher"){
-    if (localstorge.getItem("dishwasher") > 2){
+    if (localStorage.getItem("dishwasher") > 2){
       let tippelement = document.createElement('li')
       let tipptext = document.createElement('p')
-      tipptext.value = element.dishwasher
+      let strong = document.createElement('strong')
+      strong.innerHTML = element.text
+      tipptext.appendChild(strong)
       tippelement.appendChild(tipptext)
       tipplist.appendChild(tippelement)
   }
 }
   else if(element.category === "bath"){
-    if (localstorge.getItem("bath") > 2){
+    if (localStorage.getItem("bath") > 2){
       let tippelement = document.createElement('li')
       let tipptext = document.createElement('p')
-      tipptext.value = element.bath
+      let strong = document.createElement('strong')
+      strong.innerHTML = element.text
+      tipptext.appendChild(strong)
       tippelement.appendChild(tipptext)
       tipplist.appendChild(tippelement)
   }
