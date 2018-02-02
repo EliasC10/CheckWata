@@ -32,7 +32,7 @@ function search(e){
   let countrydata = JSON.parse(request.responseText)
   countrydata.forEach(function(element) {
     if(e.target.value.toLowerCase() == element.name.toLowerCase()){
-      if(location.href.substring(7) === "0.0.0.0:8080/"){ //if on localhost, other path than pages
+      if(location.href.substring(7) === "0.0.0.0:8080/" || location.href.substring(7, 8) === "0"){ //if on localhost, other path than pages
         window.location.href = "/comparison.html?country=" + element.code
       }
       else {
