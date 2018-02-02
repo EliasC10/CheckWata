@@ -29,7 +29,7 @@ $(function () {
 
   function checkIfAvailable(code) {
     let avaiable = true
-    const noneAvailableCountries = ["AX", "AS", "AD", "AI", "AQ", "AW", "BS", "BM", "BV", "IO", "KY", "CX", "CC", "CK", "FK", "FO", "GF", "PF", "TF", "GI", "GL", "GP", "GU", "GG", "HM", "VA", "HK", "IM", "JE", "KI", "LI", "MO", "MH", "MR", "YT", "FM", "MS", "NR", "AN", "NC", "NU", "NF", "MP", "PW", "PN", "RE", "SH", "PM", "WS", "SM", "SB", "GS", "SJ", "TW", "TK", "UM", "TO", "TC", "TV", "VU", "VG", "VI", "WF", "EH"]
+    const noneAvailableCountries = ["AX", "AS", "AD", "AI", "AQ", "AW", "BS", "BM", "BV", "IO", "KY", "CX", "CC", "CK", "FK", "FO", "GF", "PF", "TF", "GI", "GP", "GU", "GG", "HM", "VA", "HK", "IM", "JE", "KI", "LI", "MO", "MH", "MR", "YT", "FM", "MS", "NR", "AN", "NC", "NU", "NF", "MP", "PW", "PN", "RE", "SH", "PM", "WS", "SM", "SB", "GS", "SJ", "TW", "TK", "UM", "TO", "TC", "TV", "VU", "VG", "VI", "WF", "EH"]
     noneAvailableCountries.forEach(function(element) {
       if(element == code) {
         avaiable = false
