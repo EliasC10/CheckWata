@@ -1,3 +1,9 @@
+let name = localStorage.getItem("name") || ""
+let shower = localStorage.getItem("shower") || 0
+let bath = localStorage.getItem("bath") || 0
+let laundry = localStorage.getItem("laundry") || 0
+let dishwasher = localStorage.getItem("dishwasher") || 0
+
 
 document.getElementById('form_main').innerHTML =
 `<form action="#" id="form" name="form">
@@ -14,9 +20,9 @@ document.getElementById('form_main').innerHTML =
       </ul>
 
       <ul id="data_form">
-        <li><input type="text" id="name" name="name" size="10"></li>
+        <li><input type="text" id="name" name="name" value="${name}" size="10"></li>
         <li><select id="shower" name="shower" class="0-20"></select></li>
-        <li><select id="bath" name="bath" class="0-20"></select></li>
+        <li><select id="bath" name="bath" class="0-20">}</select></li>
         <li><select id="laundry" name="laundry" class="0-20"></select></li>
         <li><select id="dishwasher" name="dishwasher" class="0-20"></select></li>
       </ul>
@@ -32,6 +38,7 @@ document.getElementById('form_main').innerHTML =
 const open_popup = document.getElementById('popup')
   popup.addEventListener('click', () => {
     div_show()
+    loadvalues()
     })
 
 
@@ -39,6 +46,7 @@ if(document.getElementById('popup_button') !== null)  {
   const open_popup_button = document.getElementById('popup_button');
     popup_button.addEventListener('click', () => {
       div_show()
+      loadvalues()
     })
   }
 
@@ -85,3 +93,10 @@ function store(){
 
     window.alert("Submitted succesfully")
     }
+
+function loadvalues(){
+    $('#shower').val(shower)
+    $('#dishwasher').val(dishwasher)
+    $('#laundry').val(laundry)
+    $('#bath').val(bath)
+}
