@@ -21,6 +21,7 @@ document.getElementById('form_main').innerHTML =
         <li><select id="dishwasher" name="dishwasher" class="0-20"></select></li>
       </ul>
     </section>
+    <p>After saving this data, you can check your consumption by clicking on the map</p>
     <div class="bttn__wrapper" id="button_wrapper">
       <a href="index.html" class="bttn__form" id="submit" type="submit">SAVE</a>
     </div>
@@ -82,5 +83,5 @@ function store(){
     let bath = document.getElementById("bath")
     localStorage.setItem("bath", bath.value)
 
-    window.alert("Submitted succesfully, now you can check your consumption by clicking on the map")
+    window.alert("Submitted succesfully")
     }
