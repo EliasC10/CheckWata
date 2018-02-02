@@ -1,7 +1,8 @@
-let country;
+let country
 $(function () {
   $('#map').vectorMap({
     map: 'world_mill',
+    zoomOnScroll: false,
     regionStyle: {
         initial: {
             fill: '#115876',
@@ -17,14 +18,14 @@ $(function () {
     onRegionClick: function onRegionClick(event, code) {
       let avaiable = checkIfAvailable(code)
       if(avaiable === true) {
-        window.location.href = "comparison.html?country=" + code;
-        country = code;
+        window.location.href = "comparison.html?country=" + code
+        country = code
       }   
       else{
         console.log(`The country ${code} is not avaiable.`)
       }
     }
-  });
+  })
   
   function checkIfAvailable(code) {
     let avaiable = true
@@ -36,4 +37,4 @@ $(function () {
     })
     return avaiable
   }
-});
+})

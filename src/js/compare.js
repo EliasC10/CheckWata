@@ -1,5 +1,5 @@
 
-  import all from '../json/countries_search.json';
+  import all from '../json/countries_search.json'
 
   let average
   let url = new URL(window.location.href)
@@ -15,17 +15,17 @@
        <strong>2 litres</strong> for cooking,
        <strong>13 litres</strong> for personal hygiene,
        <strong>40 litres</strong> for toilet flushing
-       and <strong>9 litres</strong> for cleaning/houshold.
+       and <strong>9 litres</strong> for cleaning/household.
        Your personal weekly calculation results:
        You need <strong>${calculateShower()} litres</strong> per week for taking showers,
        <strong>${calculateBath()} litres</strong> per week for taking a baths,
        <strong>${calculateDishwasher()} litres</strong> per week for the dishwasher,
        <strong>${calculateLaundry()} litres</strong> per week for the laundry.<br><br>
        Your average daily water consumption amounts to <strong>${calculateDaily()} litres</strong> <br><br>
-       Check out your personal tipps how you can make the world be a better place.`;
+       Check out your personal tipps how you can make the world be a better place.`
        average = element.avg
     }
-  });
+  })
 
   function calculateShower() {
     let numbShower = localStorage.getItem("shower")
@@ -58,11 +58,16 @@
     let laundry = Math.round(calculateLaundry() / 7)
     let dishwasher = Math.round(calculateDishwasher() / 7)
     let result =  Math.round(fixValues + shower + bath + laundry + dishwasher)
-    return result
+    if (result === 66){
+      document.getElementById('checkform').innerHTML =
+      'Click on Cheknow to compare your water consumption with people from another country';
+      return 0
+    }
+    else return result
   }
 
   if(localStorage.getItem("name") !== null){
-    document.getElementById('input_name').innerHTML = localStorage.getItem("name");
+    document.getElementById('input_name').innerHTML = localStorage.getItem("name")
   }
 
   export function calculatePerson() {
