@@ -2,6 +2,7 @@ let country
 $(function () {
   $('#map').vectorMap({
     map: 'world_mill',
+    zoomOnScroll: false,
     regionStyle: {
         initial: {
             fill: '#115876',
