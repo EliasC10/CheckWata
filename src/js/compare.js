@@ -58,7 +58,12 @@
     let laundry = Math.round(calculateLaundry() / 7)
     let dishwasher = Math.round(calculateDishwasher() / 7)
     let result =  Math.round(fixValues + shower + bath + laundry + dishwasher)
-    return result
+    if (result === 66){
+      document.getElementById('checkform').innerHTML =
+      'Click on Cheknow to compare your water consumption with people from another country';
+      return 0
+    }
+    else return result
   }
 
   if(localStorage.getItem("name") !== null){
