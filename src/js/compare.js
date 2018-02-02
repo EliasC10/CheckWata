@@ -15,7 +15,7 @@
        <strong>2 litres</strong> for cooking,
        <strong>13 litres</strong> for personal hygiene,
        <strong>40 litres</strong> for toilet flushing
-       and <strong>9 litres</strong> for cleaning/houshold.
+       and <strong>9 litres</strong> for cleaning/household.
        Your personal weekly calculation results:
        You need <strong>${calculateShower()} litres</strong> per week for taking showers,
        <strong>${calculateBath()} litres</strong> per week for taking a baths,
