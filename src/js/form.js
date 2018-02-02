@@ -90,8 +90,6 @@ function store(){
 
     let bath = document.getElementById("bath")
     localStorage.setItem("bath", bath.value)
-
-    window.alert("Submitted succesfully")
     }
 
 function loadvalues(){
