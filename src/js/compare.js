@@ -66,7 +66,7 @@
     else return result
   }
 
-  if(localStorage.getItem("name") !== null){
+  if(localStorage.getItem("name") !== null && localStorage.getItem("name") !== ""){
     document.getElementById('input_name').innerHTML = localStorage.getItem("name")
   }
 
